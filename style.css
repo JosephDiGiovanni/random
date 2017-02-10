@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Barrio');
+
 #button-container {
     text-align: center;
 }
 
 h1 {
     text-align: center;
+    color: white;
+    font-family: Open Sans;
+}
+html{
+background: url("https://i.reddituploads.com/26bcad102b8c4e24913eb317c7265c27?fit=max&h=1536&w=1536&s=de0640cb2a2272beeac107cd0c1cf720")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

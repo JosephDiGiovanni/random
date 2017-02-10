@@ -5,7 +5,17 @@ var namespace = "http://www.w3.org/2000/svg"
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createFirstScene() {
-    
+var random = Math.random()
+makeRect(0,0,200,200,"white",1)   
+    makeRect(90,10,50,50,"chocolate",1)
+makeRect(90,25,50,10,"gold",1)
+makeText("FRAGILE", 94, 20, 10, "Open Sans","red", 1) 
+makeImage("https://image.flaticon.com/icons/svg/26/26053.svg",110,27,10,10)
+if(random < .5){
+makeCircle(100,50,3,"black")
+}else if(random>.5){
+    makeCircle(120,50,3,"white")
+} 
 }
 
 
@@ -13,7 +23,19 @@ function createFirstScene() {
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createSecondScene() {
-    
+makeRect(0,0,200,200,"white",1)
+var random = Math.random()    
+makeRect(90,15,50,50,"burlywood",1) 
+makeRect(110,15,10,10,"lightgrey",1)
+if(random <.5){
+makeRect(75,65,80,1,"chocolate",1) 
+makeCircle(76,68.5,3, "chocolate")
+makeCircle(154,68.5,3, "chocolate")
+}else{
+    makeRect(75,65,80,1,"black",1) 
+makeCircle(76,68.5,3, "black")
+makeCircle(154,68.5,3, "black")
+}makeImage("http://www.clker.com/cliparts/6/0/5/3/1241962351706252590algp66_Fragile_Sign.svg.hi.png",105,35,20,20)
 }
 
 
@@ -21,7 +43,22 @@ function createSecondScene() {
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createThirdScene() {
-    
+  var random = Math.random()
+    makeRect(0,0,200,200,"white",1)
+    makeRect(90,15,50,50,"burlywood",1) 
+if(random < .5){
+makeImage("http://vignette3.wikia.nocookie.net/dofus/images/7/75/Hilo_resistente.png/revision/latest?cb=20110325202150&path-prefix=es",110,35,20,20)
+}else{
+    makeImage("http://www.clipartkid.com/images/605/string-bow-png-whisk-in-stock-then-oil-LZb64K-clipart.png",110,35,20,20)
+}
+makePolyline("130,25 130,55 100,55 100,25", "black", 1, 1)
+makeText("THE SECRET",95,35,7,"Barrio","red", 1)
+makeText("BOX",110,45,7,"Barrio","red", 1)
+makeLine(100, 25, 130, 25, "black", 1,1)
+makeLine(90, 15, 100, 25, "black", 1,1)
+makeLine(140, 15, 130, 25, "black", 1,1)
+makeLine(130, 55, 140, 65, "black", 1,1)
+makeLine(100, 55, 90, 65, "black", 1,1)   
 }
 
 
@@ -32,10 +69,22 @@ function createThirdScene() {
 // This function is called whenever you press the "Go!" button.
 function createRandomScene() {
     // Generate a random number between 0 and 1, and store it in a variable.
-    
+    var random = Math.random()
     // If the number is less than 0.33, call the function to create your first scene.
-    
-    
+    if(random < .17){
+        createFirstScene()
+    }else if(random <.33){
+    createFirstScene()
+    }else if(random < .5){
+        createSecondScene()
+    }else if(random < .67){
+    createSecondScene()
+    }else if(random < .83){
+        createThirdScene()
+    }else{
+        createThirdScene()
+    }
+        
     
     // Else, if the number is less than 0.67, call the function to create your second scene.
     
